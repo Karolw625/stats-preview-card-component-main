@@ -1,0 +1,83 @@
+@use '../0-base' as var;
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+
+    .card__image {
+        position: relative;
+
+        .card__logo {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card__overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: var.$soft-violet-accent;
+            opacity: 0.6;
+            border-radius: 10px 10px 0 0;
+        }
+    }
+
+    .card__text-box {
+        padding: 20px 55px;
+        background-color: var.$dark-desaturated-blue-card-background;
+        border-radius: 0 0 10px 10px;
+
+        .card__head {
+            margin-bottom: 30px;
+        }
+
+        .card__stats {
+            .card__stats__numbers-box {
+                // margin-bottom: 35px;
+
+                .card__stats__numbers-title {
+                    margin-bottom: 0;
+                }
+
+                .card__stats__numbers-desc {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+// BREAKPONTS
+
+@media screen and (min-width: 1440px) {
+    .card {
+        flex-direction: row-reverse;
+        width: 1140px;
+
+        &__image {
+            @media screen and (min-width: 1440px) {
+                &__logo--sm {
+                    display: none;
+                }
+            }
+        }
+
+        &__text-box {
+            text-align: left;
+        }
+
+        &__stats {
+            display: flex;
+            gap: 80px;
+        }
+    }
+}

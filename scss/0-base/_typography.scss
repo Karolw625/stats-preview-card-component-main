@@ -1,0 +1,47 @@
+@use 'variables' as var;
+
+// font-family: 'Inter', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+// font-family: 'Lexend Deca', sans-serif;
+// @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var.$white-main-heading-stats;
+}
+
+.card__text-box {
+    text-align: center;
+}
+
+.card__head__accent {
+    color: var.$soft-violet-accent;
+}
+
+.card__head__paragraph {
+    font-weight: 400;
+    font-size: 12px;
+    color: var.$slightly-transparent-white-main-paragraph;
+    line-height: 15px;
+    
+}
+
+.card__stats {
+    line-height: 20px;
+}
+
+.card__stats__numbers-title{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card__stats__numbers-desc {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var.$slightly-transparent-white-main-paragraph
+}
